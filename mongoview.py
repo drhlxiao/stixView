@@ -1,8 +1,8 @@
 # March 25,2019
 import sys
 import os
-import numpy as np
-import re
+#import numpy as np
+#import re
 
 from PyQt5 import uic, QtWidgets, QtCore, QtGui
 from PyQt5.QtChart import QChart, QChartView, QLineSeries, QValueAxis, QBarSeries, QBarSet, QScatterSeries
@@ -450,7 +450,8 @@ class Ui(mainwindow.Ui_MainWindow):
                 self.x = [t - timestamp[0] for t in timestamp]
                 xlabel = 'Time -T0 (s)'
 
-            if xaxis_type != 2:
+            #if xaxis_type != 2:
+            if True:
                 series = QLineSeries()
                 series2 = None
 
@@ -480,29 +481,29 @@ class Ui(mainwindow.Ui_MainWindow):
                 series.attachAxis(axisY)
 
                 # histogram
-            else:
-                nbins = len(set(self.y))
-                ycounts, xedges = np.histogram(self.y, bins=nbins)
-                series = QLineSeries()
-                for i in range(0, nbins):
-                    meanx = (xedges[i] + xedges[i + 1]) / 2.
-                    series.append(meanx, ycounts[i])
-                # series.append(dataset)
-                self.chart.addSeries(series)
-                #self.chart.createDefaultAxes()
-                self.showMessage('Histogram plotted!')
+            #else:
+            #    nbins = len(set(self.y))
+            #    ycounts, xedges = np.histogram(self.y, bins=nbins)
+            #    series = QLineSeries()
+            #    for i in range(0, nbins):
+            #        meanx = (xedges[i] + xedges[i + 1]) / 2.
+            #        series.append(meanx, ycounts[i])
+            #    # series.append(dataset)
+            #    self.chart.addSeries(series)
+            #    #self.chart.createDefaultAxes()
+            #    self.showMessage('Histogram plotted!')
 
-                axisX = QValueAxis()
+            #    axisX = QValueAxis()
 
-                axisX.setTitleText(name)
-                axisY = QValueAxis()
+            #    axisX.setTitleText(name)
+            #    axisY = QValueAxis()
 
-                axisY.setTitleText("Counts")
+            #    axisY.setTitleText("Counts")
 
-                self.chart.setAxisY(axisY)
-                self.chart.setAxisX(axisX)
-                series.attachAxis(axisX)
-                series.attachAxis(axisY)
+            #    self.chart.setAxisY(axisY)
+            #    self.chart.setAxisX(axisX)
+            ##    series.attachAxis(axisX)
+            #    series.attachAxis(axisY)
 
             # self.widget.setChart(self.chart)
             self.xlabel=xlabel

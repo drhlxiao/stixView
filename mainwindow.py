@@ -218,7 +218,7 @@ class Ui_MainWindow(object):
 ""))
         self.xaxisComboBox.setItemText(0, _translate("MainWindow", "Parameter order as X"))
         self.xaxisComboBox.setItemText(1, _translate("MainWindow", "Timestamps as X"))
-        self.xaxisComboBox.setItemText(2, _translate("MainWindow", "Histogram"))
+        #self.xaxisComboBox.setItemText(2, _translate("MainWindow", "Histogram"))
         self.label.setText(_translate("MainWindow", "Data source:"))
         self.label_2.setText(_translate("MainWindow", "In"))
         self.styleEdit.setText(_translate("MainWindow", "-"))
