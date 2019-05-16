@@ -30,7 +30,7 @@ class MongoDB(object):
             self.collection_headers=self.db['headers']
             self.collection_runs=self.db['runs']
         except Exception as e:
-            print('can not connect to mongodb: {}'.format(str(e))
+            #print('can not connect to mongodb: {}'.format(str(e)))
             raise(e)
     def get_headers(self,run_id):
         if self.collection_headers:
