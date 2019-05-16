@@ -5,7 +5,6 @@ import numpy as np
 import re
 
 from PyQt5 import uic, QtWidgets, QtCore, QtGui
-from PyQt5.QtCore import QThread, pyqtSignal
 from PyQt5.QtChart import QChart, QChartView, QLineSeries, QValueAxis, QBarSeries, QBarSet, QScatterSeries
 
 import mainwindow_rc5
