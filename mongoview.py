@@ -236,6 +236,7 @@ class Ui(mainwindow.Ui_MainWindow):
         diag=QtWidgets.QDialog()
         diag_ui=mongo_dialog.Ui_Dialog()
         diag_ui.setupUi(diag)
+        diag_ui.pushButton.setFocus(True)
         #self.settings = QtCore.QSettings('FHNW', 'stix_parser')
         self.mongo_server= self.settings.value('mongo_server', [], str)
         self.mongo_port= self.settings.value('mongo_port', [], str)
@@ -324,7 +325,7 @@ class Ui(mainwindow.Ui_MainWindow):
             root.setText(0, key)
             root.setText(1, str(val))
 
-        params = self.data[row]['parameter']
+        params = self.data[row]['parameters']
         param_root = QtWidgets.QTreeWidgetItem(self.paramTreeWidget)
         param_root.setText(0, "Parameters")
         self.showParameterTree(params, param_root)
@@ -413,7 +414,7 @@ class Ui(mainwindow.Ui_MainWindow):
         timestamp = []
         self.y = []
         packet_id = self.current_row
-        params = self.data[packet_id]['parameter']
+        params = self.data[packet_id]['parameters']
         header = self.data[packet_id]['header']
         current_spid=header['SPID']
         if packet_selection == 0:
@@ -431,7 +432,7 @@ class Ui(mainwindow.Ui_MainWindow):
                 if packet['header']['SPID'] != current_spid:
                     continue
                 #only look for parameters in the packets of the same type
-                params = packet['parameter']
+                params = packet['parameters']
                 self.walk(
                     name,
                     params,
