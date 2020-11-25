@@ -1,6 +1,6 @@
-# stix_mnogo_viewer
+# STIX raw packet viewer
 
-GUI tool to view STIX packets stored in the Mongodb
+A QT GUI to view STIX packets stored in MongoDB
 
 ## Excutable releases
 https://github.com/drhlxiao/stix_mnogo_viewer/releases
