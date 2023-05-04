@@ -1,4 +1,4 @@
-# STIX raw packet viewer
+# stixView - A STIX raw data viewer
 
 A QT GUI to view STIX packets stored in MongoDB
 
