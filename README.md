@@ -3,7 +3,7 @@
 A QT GUI to view STIX packets stored in MongoDB
 
 ## Excutable releases
-https://github.com/drhlxiao/stix_mnogo_viewer/releases
+https://github.com/drhlxiao/stixView/releases
 
 ## Screenshots
 ![Screenshot](screenshots/screenshot1.jpg)
